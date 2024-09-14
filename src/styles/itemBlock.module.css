@@ -1,12 +1,19 @@
 .itemBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: red;
     border: 2px solid rgb(0, 255, 0);
     height: 480px;
     width: 380px;
 }
+.itemBlock h1{
+    font-size: 25px;
+}
 .itemBlock img{
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 70%;
+    max-height: 70%;
     display: block;
     background-size: cover;
 }

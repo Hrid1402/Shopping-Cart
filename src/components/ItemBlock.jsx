@@ -9,7 +9,7 @@ function ItemBlock({title, url, price}){
       <div className={styles.itemBlock}>
         <h1>{title}</h1>
         <h2>{price}$</h2>
-        <img src={url} alt={"placeholder text"} />
+        <img src={url} alt="" />
       </div>
     
   );

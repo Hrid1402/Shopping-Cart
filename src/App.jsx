@@ -1,15 +1,22 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import ItemBlock from './components/ItemBlock'
 import AllProducts from './components/AllProducts'
+import SearchBar from './components/SearchBar'
+import TopBar from './components/TopBar'
 
 function App() {
+  const [url, setUrl] = useState("https://dummyjson.com/products?limit=100");
+  
 
+  function searchProducts(name){
+    setUrl("https://dummyjson.com/products/search?q=" + name);
+  }
   return (
     <>
-
-      <AllProducts></AllProducts>
+      <TopBar setValue={searchProducts}></TopBar>
+      
+      <AllProducts url={url}></AllProducts>
     </>
   )
 }
