@@ -1,0 +1,40 @@
+article{
+    margin-top: 45px;
+    display: flex;
+    flex-direction: row;
+}
+.imgContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 620px;
+    height: 620px;
+}
+.picture{
+    max-height: 620px;
+    width: auto;
+    max-width: 620px;
+    height: auto;
+}
+.tags{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin: 0;
+}
+.tags h4{
+    margin: 0;
+}
+h1{
+    margin-top: 15px;
+}
+.reviews{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-bottom: 225px;
+}
+.reviewText{
+    font-size: 35px;
+    margin-left: 5%;
+}

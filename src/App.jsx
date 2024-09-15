@@ -4,7 +4,7 @@ import SearchBar from './components/SearchBar'
 import TopBar from './components/TopBar'
 
 function App() {
-  const [url, setUrl] = useState("https://dummyjson.com/products?limit=100");
+  const [url, setUrl] = useState("https://dummyjson.com/products?limit=150");
   
 
   function searchProducts(name){

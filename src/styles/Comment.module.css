@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(235, 235, 235);
+    width: 40%;
+    margin-left: 5%;
+    border-radius: 25px;
+    padding: 20px;
+}
+.container .user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .625rem;
+}
+.container .stars{
+    margin: 2px;
+}
+.container .content{
+    margin: 2px;
+}
+.container .date{
+    margin: 2px;
+}
+.container img{
+    height: 50px;
+    width: 50px;
+}

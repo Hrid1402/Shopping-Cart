@@ -26,7 +26,7 @@ function AllProducts({url="https://dummyjson.com/products?limit=50"}){
           (products.length>1) ?
           <div className={styles.main}>
           {
-            products.map((p)=>{ return <ItemBlock title={p.title} url={p.images[0]} price={p.price} id={p.id} key={uuidv4()}/>})
+            products.map((p)=>{ return <ItemBlock title={p.title} url={p.thumbnail} price={p.price} id={p.id} key={uuidv4()}/>})
           }
           </div> : <div><h1>Sorry, we didn't found your item, try with something else!</h1></div>
           
