@@ -8,6 +8,10 @@
     height: 480px;
     width: 380px;
 }
+.itemBlock:hover{
+    cursor: pointer;
+    background-color: rgb(73, 0, 0);
+}
 .itemBlock h1{
     font-size: 25px;
 }

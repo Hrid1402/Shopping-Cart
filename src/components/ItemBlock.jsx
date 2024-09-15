@@ -1,16 +1,22 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import styles from '../styles/itemBlock.module.css';
+import { useNavigate} from "react-router-dom";
+function ItemBlock({title, url, price, id}){
 
-function ItemBlock({title, url, price}){
-
+  const navigate = useNavigate();
     return (
-    
-      <div className={styles.itemBlock}>
+      
+      <button className={styles.itemBlock} onClick={()=>{
+        console.log("["+id+"] " + title)
+        navigate("/item?id=" + id);
+
+        
+        }}>
         <h1>{title}</h1>
         <h2>{price}$</h2>
         <img src={url} alt="" />
-      </div>
+      </button>
     
   );
 }
