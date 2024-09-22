@@ -13,7 +13,7 @@ function TopBar({setValue}) {
               <h1>Shop</h1>
             </Link>
             <SearchBar setValue={setValue}></SearchBar>
-            <Link><img src={cart} alt="cart" className={styles.cart}/></Link>
+            <Link to="/cart"><img src={cart} alt="cart" className={styles.cart}/></Link>
         </div>
         
     </div>

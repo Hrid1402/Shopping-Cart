@@ -10,7 +10,6 @@ function ItemBlock({title, url, price, id}){
       <button className={styles.itemBlock} onClick={()=>{
         console.log("["+id+"] " + title)
         navigate("/item?id=" + id);
-
         
         }}>
         <h1>{title}</h1>

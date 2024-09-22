@@ -7,6 +7,7 @@ import SearchBar from './components/SearchBar.jsx';
 import Profile from './Profile.jsx';
 import ErrorPage from './ErrorPage.jsx';
 import Item from './Item.jsx';
+import Cart from './Cart.jsx';
 
 
 const router = createBrowserRouter([
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/products",
     element: <App />,
+  },
+  {
+    path: "/cart",
+    element: <Cart/>,
   },
   {
     path: "/",

@@ -38,3 +38,55 @@ h1{
     font-size: 35px;
     margin-left: 5%;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.amount{
+    display: flex;
+    
+}
+.amount input{
+    background-color: orange;
+    display: flex;
+    outline: none;
+    justify-content: center;
+    text-align: center;
+    font-size: 45px;
+    width: 80px;
+    color: rgb(255, 255, 255);
+    border: none;
+    align-items: center;
+}
+.amount button{
+    width: 70px;
+    height: 70px;
+    border: none;
+    font-size: 48px;
+    text-align: center;
+    background-color: orange;
+    color: rgb(255, 255, 255);
+}
+.amount button:hover{
+    background-color: rgb(255, 183, 48);
+}
+.addBTN{
+    background-color: orange;
+    height: 120px;
+    font-size: 35px;
+    width: 180px;
+    border-radius: 10px;
+    border: black 1px solid ;
+}
+.addBTN:hover{
+    background-color: rgb(255, 255, 255);
+    color: orange;
+    border-radius: 10px;
+    border: black 1px solid ;
+}
+.addBTN:active{
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
