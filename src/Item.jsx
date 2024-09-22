@@ -29,7 +29,7 @@ function Item() {
                     <div className={styles.tags}>
                         <h4>Tags: </h4>
                     {   
-                        item.tags.map((t)=> {return <h4>{t}</h4>})
+                        item.tags.map((t, i)=> {return <h4 key={i}>{t}</h4 >})
                     }
                     </div>
                     

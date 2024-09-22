@@ -2,6 +2,7 @@ import { StrictMode, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App.jsx'
+import Categories from './Categories.jsx';
 import './styles/index.css'
 import SearchBar from './components/SearchBar.jsx';
 import Profile from './Profile.jsx';
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/products",
     element: <App />,
+  },
+  {
+    path: "/categories",
+    element: <Categories></Categories>,
   },
   {
     path: "/",

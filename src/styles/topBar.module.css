@@ -20,10 +20,13 @@
 .top .logoText h1{
     color: white;
 }
-.top img{
+.top .logo{
     height: 70px;
 }
 .main h1{
     padding: 0;
     margin: 0;
+}
+.cart{
+    height: 80px;
 }

@@ -1,11 +1,77 @@
 .bar{
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(241, 241, 241);
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    font-size: 22px;
+    color: black;
+    padding: 10px 19px 10px 69px;
+    border: 1px solid rgb(241, 241, 241);
+    outline: none;
+    box-shadow: 0px 0px 15px 5px rgba(124, 124, 124, 0.15);
+}
+.containerBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: 80%;
     height: 30px;
-    border-radius: 25px;
-    font-size: 18px;
-    color: black;
-    padding: 10px 19px 10px 19px;
-    border: 1px solid black;
+}
+.search{
+    height: 45px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 158px;
+    transition: transform 0.4s;
+    transform: scale(1);
+}
+.search:hover{
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s;
+    transform: scale(1.2);
+}
+.categories{
+    position: absolute;
+    left: 290px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 0px;
     outline: none;
+    border-radius: 5px;
+    border: none;
+    background-color:  rgb(248, 196, 119);
+    transition: transform 0.5s;
+}
+.categories:hover{
+    cursor: pointer;
+    transition: background-color 0.4s;
+    background-color:  rgb(255, 168, 37);
+}
+.categories ul{
+    display: none;
+}
+.categories:hover ul{
+    margin: 0;
+    padding: 5px 25px 5px 25px;
+    border-radius: 10px;
+    display: block;
+    text-align: start;
+    background-color: rgb(255, 168, 37);
+    border: 1px black solid;
+}
+.categories ul li{
+    font-size: 15px;
+    padding: 5px;
+}
+.categories ul li:hover{
+    background-color: rgb(211, 128, 3);
+}
+.categories img{
+    height: 100%;
 }
