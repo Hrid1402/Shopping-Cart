@@ -3,6 +3,15 @@ import AllProducts from './components/AllProducts'
 import SearchBar from './components/SearchBar'
 import TopBar from './components/TopBar'
 
+function cleanText(text){
+  let words = text.split("-");
+  let cleanText = ""
+  for(let w of words){
+    cleanText += w[0].toUpperCase() + w.slice(1) + " ";
+  }
+  return cleanText.slice(0,-1)
+}
+
 function App() {
   const [url, setUrl] = useState("https://dummyjson.com/products?limit=150");
   const [searchedItem, setSearchedItem] = useState(null);
@@ -14,7 +23,7 @@ function App() {
       setSearchedItem([name, false]);
     }else{
       setUrl("https://dummyjson.com/products/category/" + name);
-      setSearchedItem([name, true]);
+      setSearchedItem([cleanText(name), true]);
     }
     
   }

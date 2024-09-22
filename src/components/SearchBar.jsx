@@ -36,6 +36,7 @@ const categories = [
 
 function SearchBar({setValue=null}){
   const [inputValue, setInputValue] = useState('');
+  const [dropMenuClass, setDropMenuClass] = useState(styles.hide);
   const navigate = useNavigate();
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -58,22 +59,33 @@ function SearchBar({setValue=null}){
     }
  
   }
+  function cleanText(text){
+    let words = text.split("-");
+    let cleanText = ""
+    for(let w of words){
+      cleanText += w[0].toUpperCase() + w.slice(1) + " ";
+    }
+    return cleanText.slice(0,-1)
+  }
 
   return (
     setValue==null ? 
     <div className={styles.containerBar}>
       <input className={styles.bar} placeholder='What are you looking for?' type="text" onClick={()=>navigate("/products")}/>
+      <button className={styles.categories} onClick={()=>navigate("/products")}>
+        <img src={category} alt="Categories" />
+      </button>
       <img src={searchIcon} alt="Search" className={styles.search} onClick={()=>navigate("/products")}/>
     </div>
     
     :
     <div className={styles.containerBar}>
-      <button className={styles.categories} >
+      <button className={styles.categories} onClick={()=>{(dropMenuClass=="") ? setDropMenuClass(styles.hide) : setDropMenuClass("")}}>
         <img src={category} alt="Categories" />
-        <ul>
+        <ul className={dropMenuClass}>
           {
             categories.map((c, i)=>{
-                  return <li key={i} onClick={()=>searchProcess(c)}>{c}</li>
+                  return <li key={i} onClick={()=>searchProcess(c)}> {cleanText(c)}</li>
               })
             }
         </ul>

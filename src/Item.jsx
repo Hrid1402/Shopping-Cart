@@ -44,7 +44,7 @@ function Item() {
             </article>
             <h2 className={styles.reviewText}>Reviews</h2>
             <div className={styles.reviews}>
-                {item.reviews.map((r)=>{return <Comment name={r.reviewerName} comment={r.comment} date={r.date} rating={r.rating}></Comment>})}
+                {item.reviews.map((r,  i)=>{return <Comment key={i} name={r.reviewerName} comment={r.comment} date={r.date} rating={r.rating}></Comment>})}
                 
             </div>
         </>

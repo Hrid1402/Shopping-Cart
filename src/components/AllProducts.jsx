@@ -23,7 +23,7 @@ function AllProducts({url="https://dummyjson.com/products?limit=50", search}){
       return (
         <>
         {
-          (search==null || search == "") ? null : (search[1]==false) ? <h2>Results for: <span>{search}</span></h2> : <h2>Category: <span>{search}</span></h2>
+          (search==null || search[0] == "") ? null : (search[1]==false) ? <h2>Results for: <span>{search}</span></h2> : <h2>Category: <span>{search}</span></h2>
         }
         
         {
