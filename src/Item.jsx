@@ -3,6 +3,7 @@ import TopBar from './components/TopBar'
 import { useSearchParams } from 'react-router-dom';
 import styles from './styles/Item.module.css';
 import Comment from './components/Comment.jsx';
+import box from './assets/box.png';
 
 
 function Item() {
@@ -16,13 +17,15 @@ function Item() {
           .then((response) => response.json())
           .then((response) => {
             setItem(response)
-            let clone = JSON.parse(localStorage.getItem("items"));
-            for(let o of clone){
-                if(o.id == response.id){
-                    setInCart(true);
-                    setAmount(o.amount);
+            if(localStorage.getItem("items") != null){
+                let clone = JSON.parse(localStorage.getItem("items"));
+                for(let o of clone){
+                    if(o.id == response.id){
+                        setInCart(true);
+                        setAmount(o.amount);
+                    }
                 }
-            }
+            }  
           })
           .catch((error) => console.error(error));
         
@@ -35,9 +38,13 @@ function Item() {
       };
 
     function addToCart(){
-        let clone = [...JSON.parse(localStorage.getItem("items"))];
-        clone.push({id: item.id, name: item.title, amount: amount ,price: item.price, thumbnail: item.images[0]});
-        localStorage.setItem("items", JSON.stringify(clone));
+        if(localStorage.getItem("items") != null){
+            let clone = [...JSON.parse(localStorage.getItem("items"))];
+            clone.push({id: item.id, name: item.title, amount: amount ,price: item.price, thumbnail: item.thumbnail});
+            localStorage.setItem("items", JSON.stringify(clone));
+        }else{
+            localStorage.setItem("items", JSON.stringify([{id: item.id, name: item.title, amount: amount ,price: item.price, thumbnail: item.thumbnail}]));
+        }
         setInCart(true);
         console.log(JSON.parse(localStorage.getItem("items")));
     }
@@ -49,6 +56,9 @@ function Item() {
         console.log(JSON.parse(localStorage.getItem("items")));
     }
     function changeAmountFromCart(thisAmount){
+        if(localStorage.getItem("items") == null){
+            return
+        }
         let clone = [...JSON.parse(localStorage.getItem("items"))];
         for(let ob of clone){
             if(ob.id == item.id){
@@ -74,16 +84,16 @@ function Item() {
                     <div className={styles.tags}>
                         <h4>Tags: </h4>
                     {   
-                        item.tags.map((t, i)=> {return <h4 key={i}>{t}</h4 >})
+                        item.tags.map((t, i)=> {return <h4 className={styles.tag} key={i}>{t} </h4 >})
                     }
                     </div>
                     
-                    <h1>{item.title}</h1>
-                    {(item.brand) ? <h2>{item.brand}</h2> : <h2>Generic</h2>}
-                    <h2>Price: {item.price}$</h2>
-                    <h3>{item.description}</h3>
+                    <h1 className={styles.itemName}>{item.title}</h1>
+                    {(item.brand) ? <h2 className={styles.brand}>{item.brand}</h2 > : <h2 className={styles.brand}>Generic</h2>}
+                    <h2 className={styles.price}>{item.price}$</h2>
+                    <p className={styles.descr}>{item.description}</p>
                     <h3>Rating: ⭐ {item.rating}</h3>
-                    <h3>{item.shippingInformation}</h3>
+                    <h3 className={styles.ship}><img src={box}/>{item.shippingInformation}</h3>
                     <h3>{item.warrantyInformation}</h3>
                     <div className={styles.amount}>
                         <button onClick={()=> {
@@ -94,7 +104,7 @@ function Item() {
                             changeAmountFromCart(amount+1)}}>+</button>
                     </div>
                     {
-                        (!inCart) ? <button className={styles.addBTN}  onClick={()=>addToCart()}>Add to the cart</button> : <button className={styles.addBTN} onClick={()=>removeFromCart()}>Remove from cart</button>
+                        (!inCart) ? <button className={styles.addBTN}  onClick={()=>addToCart()}>Add to cart</button> : <button className={styles.addBTN} onClick={()=>removeFromCart()}>Remove from cart</button>
                     }
                     
                 </div>

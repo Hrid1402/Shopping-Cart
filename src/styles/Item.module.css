@@ -2,6 +2,7 @@ article{
     margin-top: 45px;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 .imgContainer{
     display: flex;
@@ -9,6 +10,29 @@ article{
     justify-content: center;
     width: 620px;
     height: 620px;
+}
+.ship{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.descr{
+    font-size: 25px;
+    margin-right: 10%;
+    
+}
+.itemName{
+    margin-bottom: 5px;
+}
+.price{
+    margin-top: 10px;
+    font-size: 40px;
+    margin-bottom: 5px;
+
+}
+.brand{
+    font-style: italic;
+    margin: 0;
 }
 .picture{
     max-height: 620px;
@@ -19,10 +43,14 @@ article{
 .tags{
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 15px;
     margin: 0;
 }
-.tags h4{
+.tags .tag{
+    background-color: rgb(231, 231, 231);
+    border-radius: 5px;
+    padding: 5px;
     margin: 0;
 }
 h1{
@@ -46,45 +74,50 @@ input::-webkit-inner-spin-button {
 }
 .amount{
     display: flex;
+    border: 1px solid rgb(250, 217, 217);
+    width: 150px;
+    height: 80px;
     
 }
 .amount input{
-    background-color: orange;
+    background-color: rgb(255, 251, 244);
     display: flex;
     outline: none;
     justify-content: center;
     text-align: center;
     font-size: 45px;
-    width: 80px;
-    color: rgb(255, 255, 255);
+    width: 60px;
+    color: rgb(255, 183, 48);
     border: none;
     align-items: center;
 }
 .amount button{
     width: 70px;
-    height: 70px;
+    height: 100%;
     border: none;
     font-size: 48px;
     text-align: center;
-    background-color: orange;
+    background-color: rgb(255, 183, 48);
     color: rgb(255, 255, 255);
 }
 .amount button:hover{
-    background-color: rgb(255, 183, 48);
+    background-color: rgb(255, 166, 0);
 }
 .addBTN{
-    background-color: orange;
-    height: 120px;
+    margin-top: 25px;
+    background-color: rgb(255, 166, 0);
+    color: rgb(255, 255, 255);
+    padding: 25px 25px 25px 25px;
     font-size: 35px;
-    width: 180px;
-    border-radius: 10px;
-    border: black 1px solid ;
+
+    border-radius: 50px;
+    border: rgb(255, 255, 255) 1px solid ;
 }
 .addBTN:hover{
     background-color: rgb(255, 255, 255);
     color: orange;
-    border-radius: 10px;
-    border: black 1px solid ;
+    border: rgb(255, 166, 0) 1px solid;
+    
 }
 .addBTN:active{
     background-color: rgb(255, 255, 255);

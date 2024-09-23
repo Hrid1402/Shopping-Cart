@@ -7,7 +7,10 @@ import { v4 as uuidv4 } from 'uuid';
 function Cart() {
   const [items, setItems] = useState([])
   function modifyCart(){
-    setItems((JSON.parse(localStorage.items)));
+    if (localStorage.items!= null){
+      setItems((JSON.parse(localStorage.items)));
+    }
+    
   }
   function removeItem(id){
     let clone = [...JSON.parse(localStorage.getItem("items"))];
@@ -23,6 +26,9 @@ function Cart() {
     setItems(clean);
   };
   function getTotal(){
+    if(localStorage.items==null){
+      return 0;
+    }
     let clone = [...JSON.parse(localStorage.getItem("items"))];
     let total = 0;
     for(let ob of clone){
@@ -40,7 +46,7 @@ function Cart() {
         <h1>Shopping Cart</h1>
         <div className={styles.article}>
         {
-          items.map((item)=>{
+          (items.length==0) ? <h3>Looks like you haven’t added anything yet! Browse our products and fill your cart with amazing finds at MetroMarket.</h3> : items.map((item)=>{
             return <Item_CART key={uuidv4()} id={item.id} name={item.name} amount={item.amount} price={item.price} image={item.thumbnail} remove={()=>removeItem(item.id)}></Item_CART>})
         }
         </div>
