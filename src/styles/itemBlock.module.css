@@ -15,6 +15,10 @@
 .itemBlock h1{
     font-size: 25px;
 }
+.itemBlock .block{
+    height: 250px;
+    width: 25px;
+}
 .itemBlock img{
     max-width: 70%;
     max-height: 70%;

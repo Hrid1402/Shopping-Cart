@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import TopBar from './components/TopBar'
 import Item_CART from './components/Item_CART';
+import styles from './styles/Cart.module.css';
 import { v4 as uuidv4 } from 'uuid';
 
 function Cart() {
@@ -21,6 +22,14 @@ function Cart() {
     localStorage.setItem("items", JSON.stringify(clean));
     setItems(clean);
   };
+  function getTotal(){
+    let clone = [...JSON.parse(localStorage.getItem("items"))];
+    let total = 0;
+    for(let ob of clone){
+      total += ob.price * ob.amount;
+    }
+    return total.toFixed(2)
+  }
   useEffect(()=>{
     modifyCart();
   }, [localStorage.items]);
@@ -29,10 +38,14 @@ function Cart() {
     <>
         <TopBar/>
         <h1>Shopping Cart</h1>
+        <div className={styles.article}>
         {
           items.map((item)=>{
             return <Item_CART key={uuidv4()} id={item.id} name={item.name} amount={item.amount} price={item.price} image={item.thumbnail} remove={()=>removeItem(item.id)}></Item_CART>})
         }
+        </div>
+        <h1>Total: {getTotal()}</h1>
+        <button>Confirm purchase</button>
     </>
   )
 }

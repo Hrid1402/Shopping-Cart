@@ -1,0 +1,72 @@
+.welcome{
+    font-size: 75px;
+    margin-left: 10%;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.main .content p{
+    font-size: 35px;
+    margin-left: 10%;
+}
+.marquee{
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+.container{
+    
+    animation: scrolling 35s infinite linear;
+    display: inline-block;
+}
+.image{
+    border: rgb(255, 255, 255) solid 3px;
+    height: 21.875rem;
+    width: 31.5625rem;
+    pointer-events: none;
+    user-select: none;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+}
+.content img{
+    width: 750px;
+}
+.storeName{
+    color: orange;
+}
+.discover{
+    font-size: 75px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+.d_t{
+    font-size: 25px;
+    display: flex;
+    margin-bottom: 68px;
+    justify-content: center;
+}
+.p_footer{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 45px 0px 0px 0px;
+    height: 45px;
+}
+.p_footer a{
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+    gap: 5px;
+}
+.p_footer p{
+    color: white;
+    margin: 0;
+}
+@keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}

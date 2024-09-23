@@ -10,7 +10,7 @@ function TopBar({setValue}) {
     <div className={styles.main}>
         <div className={styles.top}>
             <Link className={styles.logoText} to="/"><img className={styles.logo} src={logo} alt="Shop Logo" />
-              <h1>Shop</h1>
+              <h1>MetroMarket</h1>
             </Link>
             <SearchBar setValue={setValue}></SearchBar>
             <Link to="/cart"><img src={cart} alt="cart" className={styles.cart}/></Link>

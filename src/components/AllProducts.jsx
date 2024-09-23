@@ -5,7 +5,9 @@ import styles from '../styles/allProducts.module.css'
 import { v4 as uuidv4 } from 'uuid';
 
 
+
 function AllProducts({url="https://dummyjson.com/products?limit=50", search}){
+    
     const [products, setProducts] = useState(null);
     useEffect(() => {
         fetch(url)

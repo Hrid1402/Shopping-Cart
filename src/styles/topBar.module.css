@@ -3,6 +3,7 @@
     padding: 25px;
 
 }
+
 .top{
     display: flex;
     flex-direction: row;
@@ -19,6 +20,7 @@
 }
 .top .logoText h1{
     color: white;
+    font-size: 45px;
 }
 .top .logo{
     height: 70px;

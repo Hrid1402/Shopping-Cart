@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import category from '../assets/category.png'
 import searchIcon from "../assets/searchICON.png"
-
+import {useRef} from "react"
 
 
 const categories = [
@@ -34,7 +34,9 @@ const categories = [
   "womens-watches"
 ]
 
+
 function SearchBar({setValue=null}){
+  const menu = useRef(null);
   const [inputValue, setInputValue] = useState('');
   const [dropMenuClass, setDropMenuClass] = useState(styles.hide);
   const navigate = useNavigate();
@@ -57,8 +59,15 @@ function SearchBar({setValue=null}){
       setValue(category, true)
       console.log("#CATEGORY: " + category)
     }
- 
   }
+
+  const closeOpenMenus = (e)=>{
+    if(dropMenuClass=="" && !menu.current?.contains(e.target)){
+      setDropMenuClass(styles.hide);
+    }
+  }
+  document.addEventListener('mousedown',closeOpenMenus);
+
   function cleanText(text){
     let words = text.split("-");
     let cleanText = ""
@@ -82,7 +91,7 @@ function SearchBar({setValue=null}){
     <div className={styles.containerBar}>
       <button className={styles.categories} onClick={()=>{(dropMenuClass=="") ? setDropMenuClass(styles.hide) : setDropMenuClass("")}}>
         <img src={category} alt="Categories" />
-        <ul className={dropMenuClass}>
+        <ul className={dropMenuClass} ref={menu}>
           {
             categories.map((c, i)=>{
                   return <li key={i} onClick={()=>searchProcess(c)}> {cleanText(c)}</li>

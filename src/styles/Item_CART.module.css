@@ -1,0 +1,12 @@
+.article{
+    background-color: red;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.inf{
+    background-color: rgb(134, 72, 0);
+}
+.removeBTN{
+    font-size: 35px;
+}
