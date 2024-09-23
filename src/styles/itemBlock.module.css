@@ -30,3 +30,25 @@
     display: block;
     background-size: cover;
 }
+@media (max-width:1454px){
+    .itemBlock{
+        width: 325px
+    }
+}
+@media (max-width:1372px){
+    .itemBlock{
+        width: 300px
+    }
+}
+@media (max-width:950px){
+    .itemBlock{
+        width: 280px
+    }
+}
+@media (max-width:890px){
+    .itemBlock{
+        width: 250px;
+        height: 440px;
+        
+    }
+}

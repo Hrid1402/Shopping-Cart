@@ -123,3 +123,36 @@ input::-webkit-inner-spin-button {
     background-color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
 }
+
+.picture2{
+    display: none;
+}
+
+@media (max-width:960px){
+    .picture{
+        max-height: 520px;
+        max-width: 520px;
+    }
+}
+@media (max-width:790px){
+    .picture, .imgContainer{
+        display: none;
+    }
+    .picture2{
+        display: block;
+        width: 330px;
+    }
+    .allContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .descr{
+        text-align: center;
+        margin-right: 0;
+    }
+    .itemName{
+        text-align: center;
+    }
+}

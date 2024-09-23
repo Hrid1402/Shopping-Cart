@@ -12,6 +12,7 @@
     margin-left: 10%;
 }
 .marquee{
+    width: 100%;
     overflow-x: hidden;
     white-space: nowrap;
 }
@@ -31,7 +32,7 @@
     display: flex;
     flex-direction: row;
 }
-.content img{
+.bag{
     width: 750px;
 }
 .storeName{
@@ -42,8 +43,10 @@
     display: flex;
     justify-content: center;
     margin-bottom: 5px;
+    text-align: center;
 }
 .d_t{
+    text-align: center;
     font-size: 25px;
     display: flex;
     margin-bottom: 68px;
@@ -70,4 +73,109 @@
 @keyframes scrolling {
     0% { transform: translateX(0); }
     100% { transform: translateX(-100%); }
+}
+
+
+@media (max-width:1326px){
+    .bag{
+        width: 650px;
+    }
+}
+@media (max-width:1272px){
+    .bag{
+        width: 450px;
+    }
+}
+
+@media (max-width:1130px){
+    .bag{
+        width: 400px;
+    }
+}
+
+@media (max-width:1100px){
+    .bag{
+        width: 300px;
+    }.main .content p{
+        font-size: 25px;
+        margin-left: 10%;
+    }
+}
+@media (max-width:960px){
+    .bag{
+        width: 250px;
+        height: 250px;
+    }.main .content p{
+        font-size: 25px;
+        margin-left: 10%;
+    }
+}
+@media (max-width:550px){
+    .welcome{
+        font-size: 55px;
+    }
+    .bag{
+        width: 230px;
+        height: 230px;
+    }.discover{
+        font-size: 55px;
+    }
+    .image{
+        height: 21.875rem;
+        width: 25.3125rem;
+    }
+}
+@media (max-width:450px){
+    .welcome{
+        font-size: 55px;
+    }
+    .main .content p{
+        font-size: 25px;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+    }
+    .bag{
+        display: none;
+    }.discover{
+        font-size: 55px;
+    }
+    .image{
+        height: 15.625rem;
+        width: 25.3125rem;
+    }
+}
+@media (max-width:412px){
+    .welcome{
+        font-size: 45px;
+    }
+    .discover{
+        font-size: 45px;
+    }
+    .image{
+        height: 9.375rem;
+        width: 19.0625rem;
+    }
+}
+@media (max-width:340px){
+    .welcome{
+        font-size: 35px;
+    }
+    .discover{
+        font-size: 35px;
+    }
+    .main .content p{
+        font-size: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .d_t{
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 20px;
+    }
+    .image{
+        height: 9.375rem;
+        width: 19.0625rem;
+    }
 }

@@ -13,3 +13,24 @@
 .result{
     margin-left: 2%;
 }
+
+@media (max-width:1454px){
+    .main{
+        grid-template-columns: repeat(auto-fill, minmax(325px, 1fr))
+    }
+}
+@media (max-width:1372px){
+    .main{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+    }
+}
+@media (max-width:950px){
+    .main{
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
+    }
+}
+@media (max-width:890px){
+    .main{
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+    }
+}

@@ -79,7 +79,7 @@ function Item() {
                 <div className={styles.imgContainer}>
                     <img src={item.images[0]} className={styles.picture}/>
                 </div>
-                <div>
+                <div className={styles.allContainer}>
                     <h3>Category: {item.category}</h3>
                     <div className={styles.tags}>
                         <h4>Tags: </h4>
@@ -90,6 +90,7 @@ function Item() {
                     
                     <h1 className={styles.itemName}>{item.title}</h1>
                     {(item.brand) ? <h2 className={styles.brand}>{item.brand}</h2 > : <h2 className={styles.brand}>Generic</h2>}
+                    <img src={item.images[0]} className={styles.picture2}/>
                     <h2 className={styles.price}>{item.price}$</h2>
                     <p className={styles.descr}>{item.description}</p>
                     <h3>Rating: ⭐ {item.rating}</h3>

@@ -20,3 +20,15 @@
 .sad{
     align-self: end;
 }
+
+
+@media (max-width:424px){
+    .sad{
+        width: 400px;
+    }
+}
+@media (max-width:392px){
+    .main h1{
+        font-size: 100px;
+    }
+}

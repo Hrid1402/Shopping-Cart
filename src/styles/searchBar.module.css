@@ -86,3 +86,59 @@
     background-color: rgb(255, 168, 37);
     border: 1px rgb(255, 255, 255) solid;
 }
+
+@media (max-width:654px){
+    .bar{
+        background-color: rgb(241, 241, 241);
+        height: 80%;
+        font-size: 18px;
+    }
+    .containerBar{
+        width: 55vw;
+    }
+    ::-webkit-input-placeholder {
+        color:transparent;
+     }
+
+}
+@media (max-width:632px){
+    .containerBar{
+        width: 50vw;
+    }
+
+}
+@media (max-width:518px){
+    .search{
+        height: 45px;
+        right: 132px;
+    }
+}
+@media (max-width:430px){
+    .search{
+        height: 45px;
+        right: 112px;
+    }
+}
+@media (max-width:372px){
+    .categories{
+        position: absolute;
+        left: 85px;
+    }
+    .bar{
+        border-radius: 5px;
+        width: 80px;
+    }
+}
+@media (max-width:364px){
+    .search{
+        height: 45px;
+        right: 95px;
+    }
+    .categories{
+        left: 78px;
+    }
+    .bar{
+        border-radius: 5px;
+        width: 80px;
+    }
+}

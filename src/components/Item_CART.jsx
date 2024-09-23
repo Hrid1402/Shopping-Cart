@@ -12,8 +12,10 @@ function Item_CART({id, name, amount,  price, image, remove}) {
             <img src={image} alt={name + " image"} />
           </div>
           <div className={styles.s2}>
-            <h3 className={styles.amount}>Amount: {amount}</h3>
-            <h2 className={styles.Utotal}>{(amount*price).toFixed(2)}$</h2>
+            <div className={styles.s2INF}>
+              <h3 className={styles.amount}>Amount: {amount}</h3>
+              <h2 className={styles.Utotal}>{(amount*price).toFixed(2)}$</h2>
+            </div>
             <button className={styles.removeBTN} onClick={(e)=>{remove(id), e.stopPropagation()}}><img src={trashICON}></img></button>
           </div>
         

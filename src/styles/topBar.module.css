@@ -31,3 +31,16 @@
 .cart{
     height: 80px;
 }
+@media (max-width:950px){
+    .top .logoText h1{
+        display: none;
+    }
+}
+@media (max-width:654px){
+    .top .logo{
+        height: 50px;
+    }
+    .cart{
+        height: 50px;
+    }
+}

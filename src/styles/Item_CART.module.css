@@ -69,3 +69,82 @@
 .Utotal{
     font-size: 45px;
 }
+.s2INF{
+    display: flex;
+    align-items: center;
+    gap: 75px;
+}
+@media (max-width:1380px){
+    .inf{
+        width: 98%;
+    }
+}
+@media (max-width:1080px){
+    .inf .s1{
+        width: 290px;
+    }
+    .inf .titleItem{
+        font-size: 25px;
+    }
+}
+
+@media (max-width:1048px){
+    .amount{
+        font-size: 35px;
+    }
+    .Utotal{
+        font-size: 35px;
+    }
+}
+@media (max-width:950px){
+    .amount{
+        font-size: 35px;
+    }
+    .Utotal{
+        font-size: 35px;
+    }
+    .s2INF{
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+}
+
+@media (max-width:736px){
+    .amount{
+        font-size: 25px;
+    }
+    .Utotal{
+        font-size: 25px;
+    }
+    .inf .s2{
+        gap: 45px;
+    }
+}
+@media (max-width:684px){
+    .removeBTN img{
+        width: 100px;
+        height: 100px;
+    }
+}
+@media (max-width:634px){
+    .inf .s2{
+        flex-direction: column;
+    }
+    .article{
+        flex-direction: column;
+        align-items: center;
+    }
+    .inf{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin-right: 2%;
+    }
+    .removeBTN{
+        border: 1px solid black;
+    }
+}

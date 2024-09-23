@@ -44,7 +44,7 @@ function Profile() {
             <h1 className={styles.welcome}>Welcome to <span className={styles.storeName}>MetroMarket</span>!</h1>
             <div className={styles.content}>
               <p>Your one-stop destination for everything you need. <br />Explore a wide range of products, from electronics and home essentials to fashion and beauty.  <br />Whether you're shopping for the latest gadgets or looking for everyday items, we've got you covered.  <br />With fast shipping, secure payments, and unbeatable customer service, MetroMarket makes online shopping simple and convenient.</p>
-              <img src={shopBag}/>
+              <img className={styles.bag} src={shopBag}/>
             </div>
             <h2 className={styles.discover}>Discover Our Products</h2>
             <p className={styles.d_t}>From tech to style, find the products that suit your life. Shop with ease and discover great deals, all in one place!</p>
