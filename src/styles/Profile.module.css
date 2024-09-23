@@ -1,6 +1,7 @@
 .welcome{
     font-size: 75px;
     margin-left: 10%;
+    align-self: flex-start;
 }
 .main{
     display: flex;
