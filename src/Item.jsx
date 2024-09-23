@@ -36,7 +36,7 @@ function Item() {
 
     function addToCart(){
         let clone = [...JSON.parse(localStorage.getItem("items"))];
-        clone.push({id: item.id, name: item.title, amount: amount ,price: item.price, thumbnail: item.thumbnail});
+        clone.push({id: item.id, name: item.title, amount: amount ,price: item.price, thumbnail: item.images[0]});
         localStorage.setItem("items", JSON.stringify(clone));
         setInCart(true);
         console.log(JSON.parse(localStorage.getItem("items")));

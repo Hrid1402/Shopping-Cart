@@ -6,6 +6,11 @@
 }
 .inf{
     background-color: rgb(134, 72, 0);
+    height: 400px;
+    width: 400px;
+}
+.inf img{
+    height: 250px;
 }
 .removeBTN{
     font-size: 35px;

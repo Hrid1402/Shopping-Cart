@@ -1,5 +1,15 @@
 .main{
+    margin-top: 25px;
     display: grid;
-    gap: 15px;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr))
+    justify-items: center;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(345px, 1fr))
+}
+.sorry{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.result{
+    margin-left: 5%;
 }

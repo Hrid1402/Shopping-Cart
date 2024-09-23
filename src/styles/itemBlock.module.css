@@ -3,14 +3,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 57, 57);
-    border: 2px solid rgb(0, 255, 0);
+    background-color: rgb(252, 250, 243);
+    color: black;
+    border: 1px solid rgb(0, 0, 0);
     height: 480px;
-    width: 380px;
+    width: 345px;
+    transition: background-color 0.3s, color 0.2s;
 }
 .itemBlock:hover{
+    transition: background-color 0.3s, color 0.2s;
     cursor: pointer;
-    background-color: rgb(73, 0, 0);
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 159, 49);
 }
 .itemBlock h1{
     font-size: 25px;
@@ -20,6 +24,7 @@
     width: 25px;
 }
 .itemBlock img{
+    border: 0;
     max-width: 70%;
     max-height: 70%;
     display: block;

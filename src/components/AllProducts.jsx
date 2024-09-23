@@ -25,7 +25,7 @@ function AllProducts({url="https://dummyjson.com/products?limit=50", search}){
       return (
         <>
         {
-          (search==null || search[0] == "") ? null : (search[1]==false) ? <h2>Results for: <span>{search}</span></h2> : <h2>Category: <span>{search}</span></h2>
+          (search==null || search[0] == "") ? null : (search[1]==false) ? <h2 className={styles.result}>Results for: <span>{search}</span></h2> : <h2 className={styles.result}>Category: <span>{search}</span></h2>
         }
         
         {
@@ -36,7 +36,7 @@ function AllProducts({url="https://dummyjson.com/products?limit=50", search}){
             {
               products.map((p)=>{ return <ItemBlock title={p.title} url={p.thumbnail} price={p.price} id={p.id} key={uuidv4()}/>})
             }
-            </div> : <div><h1>Sorry, we didn't found your item, try with something else!</h1></div>
+            </div> : <div><h1 className={styles.sorry}>Oops! We Couldn't Find That Item</h1><h2 className={styles.sorry}>It looks like what you're searching for isn't available. Try checking your spelling or explore other great products at MetroMarket!</h2></div>
   
             )
           

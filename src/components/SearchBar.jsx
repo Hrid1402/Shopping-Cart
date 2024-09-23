@@ -89,9 +89,9 @@ function SearchBar({setValue=null}){
     
     :
     <div className={styles.containerBar}>
-      <button className={styles.categories} onClick={()=>{(dropMenuClass=="") ? setDropMenuClass(styles.hide) : setDropMenuClass("")}}>
+      <button ref={menu} className={styles.categories} onClick={()=>{(dropMenuClass=="") ? setDropMenuClass(styles.hide) : setDropMenuClass("")}}>
         <img src={category} alt="Categories" />
-        <ul className={dropMenuClass} ref={menu}>
+        <ul className={dropMenuClass} >
           {
             categories.map((c, i)=>{
                   return <li key={i} onClick={()=>searchProcess(c)}> {cleanText(c)}</li>

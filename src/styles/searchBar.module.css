@@ -34,7 +34,6 @@
 }
 .categories{
     position: absolute;
-    /*left: 290px;*/
     margin-left: 18px;
     height: 40px;
     width: 40px;
@@ -47,7 +46,6 @@
     border-radius: 5px;
     border: none;
     background-color:  rgb(248, 196, 119);
-    transition: transform 0.5s;
 }
 .categories:checked{
     cursor: pointer;
@@ -58,14 +56,19 @@
     display: none !important;
 }
 .categories ul{
+    position: absolute;
+    top: 40px;
     list-style-type: none;
     margin: 0;
     padding: 0px;
-    width: 125px;
     display: block;
     text-align: start;
     background-color: rgb(255, 168, 37);
     border: 1px rgb(255, 255, 255) solid;
+    height: 400px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: white rgb(255, 168, 37);
 }
 .categories ul li{
     font-size: 18px;
@@ -77,4 +80,9 @@
 }
 .categories img{
     height: 100%;
+    border: 1px rgb(255, 115, 0) solid;
+}
+.categories img:hover{
+    background-color: rgb(255, 168, 37);
+    border: 1px rgb(255, 255, 255) solid;
 }
